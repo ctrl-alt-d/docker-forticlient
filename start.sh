@@ -14,8 +14,6 @@ for iface in $(ip a | grep eth | grep inet | awk '{print $2}'); do
   iptables -t nat -A POSTROUTING -s "$iface" -j MASQUERADE
 done
 
-/gateway-fix.sh &
-
 while [ true ]; do
   echo "------------ VPN Starts ------------"
   /usr/bin/openfortivpn $VPNADDR:443 -u $VPNUSER -p $VPNPASS

@@ -14,7 +14,4 @@ RUN mknod /dev/ppp c 108 0
 COPY start.sh /start.sh
 RUN chmod u+x /start.sh
 
-COPY gateway-fix.sh /gateway-fix.sh
-RUN chmod u+x /gateway-fix.sh
-
 CMD [ "/start.sh" ]
