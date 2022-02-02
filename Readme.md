@@ -7,7 +7,7 @@ Connect to a FortiNet VPNs through docker container.
 You can access a predetermined target PC inside the VPN directly from any machine in your LAN using RDP. You just open RDP and set the `IP:PORT` like this `docker-host-name-or-IP:docker-host-mapped-port`, where
  * `docker-host-name-or-IP` - name (or IP) of your docker host,
  * `docker-host-mapped-port` - port on the left side of `-p` parameter (can be seen below).
-The docker image will handle the rest using internally installed **forticlientsslvpn_cli** and via routings
+The docker image will handle the rest using internally installed **openfortivpn** and via routings
 specified inside as well.
 
 This allows the user to RDP to the docker host with the specified port, which will then be forwarded to the docker container running the vpn, and finally redirected to the remote machine you wish to connect to (set by `VPNRDPIP`).

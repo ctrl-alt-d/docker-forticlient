@@ -18,7 +18,7 @@ done
 
 while [ true ]; do
   echo "------------ VPN Starts ------------"
-  /usr/bin/forticlient
+  /usr/bin/openfortivpn $VPNADDR:443 -u $VPNUSER -p $VPNPASS
   echo "------------ VPN exited ------------"
   sleep 10
 done
